@@ -130,8 +130,9 @@ const SubmitFeedbackConnect = connect(
         from: this.props.me.id
       };
 
-      const fb = await this.props.actions.submit(feedback);
-      console.log(fb);
+      await this.props.actions.submit(feedback);
+
+      this.props.history.push('/');
     }
 
     public next() {
