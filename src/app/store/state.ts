@@ -5,10 +5,10 @@ import { ResourceState } from '@origami/zen-lib/API';
 export interface State {
   Me: User;
   Auth: Auth;
-  resources: {
-    users: Users;
-    [name: string]: any;
-  };
+  Users: Users;
+  // resources: {
+  //   [name: string]: any;
+  // };
 }
 
 export interface Loader {

@@ -1,0 +1,12 @@
+ul.list {
+  li {
+    height: 9rem;
+    line-height: 9rem;
+    border-bottom: 1px solid $color-grey-300;
+    padding: 0 2.4rem;
+
+    &:hover {
+      background: $color-hover;
+    }
+  }
+}

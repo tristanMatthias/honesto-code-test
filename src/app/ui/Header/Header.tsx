@@ -39,7 +39,7 @@ const HeaderConnect = connect((state: State) => ({
           </Link>
           <ul>
             {HeaderBase.urls.map(({ path, text }) =>
-              <li className={path === current ? 'active' : ''}>
+              <li className={path === current ? 'active' : ''} key={path}>
                 <Link to={path}>{text}</Link>
               </li>
             )}

@@ -5,7 +5,5 @@ import {Me} from './Me';
 export const reducers = {
   Auth,
   Me,
-  resources: {
-    users: APIReducer('users')
-  }
+  Users: APIReducer('users')
 };
