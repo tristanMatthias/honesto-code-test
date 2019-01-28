@@ -8,13 +8,14 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf build/",
-    "start": "yarn dev",
+    "start": "node server.js",
     "dev": "yarn dev:app & yarn dev:server",
     "dev:server": "node server.js",
     "dev:app": "webpack --mode=development -w",
     "build": "yarn clean; yarn build:app; yarn build:server",
     "build:app": "webpack --mode=production",
-    "build:server": "tsc -p tsconfig.server.json"
+    "build:server": "tsc -p tsconfig.server.json",
+    "postinstall": "yarn build"
   },
   "devDependencies": {
     "@origami/tslint-config": "^0.0.3-alpha.3",
