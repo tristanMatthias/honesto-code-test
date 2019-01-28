@@ -5,6 +5,7 @@ export interface ButtonProps {
   disabled?: boolean;
   outline?: boolean;
   loading?: boolean;
+  onClick?(): void;
 }
 
 // tslint:disable-next-line:variable-name
@@ -13,10 +14,12 @@ export const Button: React.SFC<ButtonProps> = ({
   disabled,
   outline,
   loading,
-  children
+  children,
+  onClick
 }) => {
   return <button
-    disabled={outline || loading}
+    disabled={loading}
     className={`${className || ''} ${outline ? 'outline' : ''}`}
+    onClick={disabled ? null : onClick}
   >{children}</button>;
 };

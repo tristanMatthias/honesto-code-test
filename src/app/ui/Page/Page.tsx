@@ -17,6 +17,7 @@ export interface PageProps {
 }
 
 
+// tslint:disable-next-line:variable-name
 export const Page = connect((state: State) => ({
   authall: state.Auth,
   authLoggedIn: state.Auth.loggedIn,

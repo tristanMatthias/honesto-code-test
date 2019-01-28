@@ -1,0 +1,23 @@
+@import '../../sass/variables';
+
+.range {
+  display: inline-grid;
+  width: 100%;
+  grid-auto-flow: column;
+  grid-gap: $size-tiny;
+
+  span {
+    background-color: $color-grey-200;
+    cursor: pointer;
+
+    &:before {
+      display: block;
+      content: '';
+      padding-bottom: 100%;
+    }
+
+    &.selected {
+      background-color: $color-purple;
+    }
+  }
+}

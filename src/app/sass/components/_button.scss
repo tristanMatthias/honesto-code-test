@@ -1,9 +1,19 @@
-button {
+button, *.button {
+  display: inline-block;
   background-color: $color-purple;
   color: $color-white;
   font-size: $font-size;
   font-family: $font-family;
   border: 0;
   height: 4.8rem;
+  line-height: 4.8rem;
   border-radius: $border-radius;
+  padding: 0 $size-main;
+  cursor: pointer;
+
+  &.outline {
+    border: 1px solid $color-grey-300;
+    color: $color-text;
+    background: none;
+  }
 }

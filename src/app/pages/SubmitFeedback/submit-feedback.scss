@@ -1,0 +1,36 @@
+@import '../../sass/variables';
+
+main.submit-feedback {
+  & > .wrapper {
+    max-width: 78rem;
+  }
+  .box {
+    padding: $size-medium $size-small;
+
+    p {
+      margin-bottom: $size-small;
+    }
+    .question {
+       margin-bottom: $size-main;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        width: 15rem;
+      }
+    }
+
+    .progress-text {
+      margin-top: $size-main;
+      font-family: $font-family-regular;
+
+      strong {
+        display: block;
+        margin: $size-tiny 0;
+      }
+    }
+  }
+}

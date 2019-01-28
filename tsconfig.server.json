@@ -1,10 +1,10 @@
 {
-  "include": ["./src/server/**/*.tsx"],
+  "include": ["./src/server/**/*.ts"],
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "es6",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "./build/server",

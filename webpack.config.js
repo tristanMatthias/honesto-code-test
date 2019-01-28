@@ -11,7 +11,8 @@ module.exports = {
   entry: './src/app/index.tsx',
   output: {
     filename: 'app.js',
-    path: DIST
+    path: DIST,
+    publicPath: '/'
   },
 
   // Enable sourcemaps for debugging webpack's output.

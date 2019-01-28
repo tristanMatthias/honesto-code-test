@@ -1,22 +1,22 @@
 @font-face {
-    font-family: 'Untitled Sans Medium';
-    src: url('/fonts/fonts/UntitledSans/UntitledSansWeb-Medium.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Untitled Sans Medium';
+  src: url('/fonts/fonts/UntitledSans/UntitledSansWeb-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Untitled Sans Regular';
-    src: url('/fonts/UntitledSans/UntitledSansWeb-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Untitled Sans Regular';
+  src: url('/fonts/UntitledSans/UntitledSansWeb-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Untitled Sans Bold';
-    src: url('/fonts/UntitledSans/UntitledSansWeb-Bold.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Untitled Sans Bold';
+  src: url('/fonts/UntitledSans/UntitledSansWeb-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
@@ -31,4 +31,14 @@ a {
 h1 {
   font-size: 3.1rem;
   font-family: $font-family-regular;
+}
+
+strong {
+  font-family: $font-family-bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.5;
 }

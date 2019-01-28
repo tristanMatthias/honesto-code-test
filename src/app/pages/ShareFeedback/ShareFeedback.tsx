@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { usersGet } from '../../actions/Users';
 import { State, User as UserState } from '../../store/state';
 import { Box } from '../../ui/Box/Box';
@@ -39,6 +40,7 @@ class ShareFeedbackBase extends Component<ShareFeedbackProps> {
           {this.props.users.map((u) =>
             <li key={u.id}>
               <User userID={u.id} />
+              <Link to={`/give-feedback/${u.id}`} className='button'>Fill out</Link>
             </li>
           )}
         </ul>

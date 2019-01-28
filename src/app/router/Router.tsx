@@ -7,6 +7,7 @@ import { Login } from '../pages/Login/Login';
 import {Logout} from '../pages/Logout/Logout';
 import { MyFeedback } from '../pages/MyFeedback/MyFeedback';
 import { ShareFeedback } from '../pages/ShareFeedback/ShareFeedback';
+import { SubmitFeedback } from '../pages/SubmitFeedback/SubmitFeedback';
 import { State, User } from '../store/state';
 import { Loading } from '../ui/Loading/Loading';
 
@@ -59,6 +60,7 @@ export class Router extends React.Component<RouterProps> {
         <Route path='/logout' component={Logout} />
         <Route path='/login' component={Login} />
         <Route path='/my-feedback' component={MyFeedback} />
+        <Route path='/give-feedback/:id' component={SubmitFeedback} />
         <Route path='/' component={ShareFeedback} />
       </Switch>
     </BrowserRouter>;
