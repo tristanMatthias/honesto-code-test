@@ -3,6 +3,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopytPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
+const BaseCSSExtract = new ExtractTextPlugin('base.css');
+const ResetCSSExtract = new ExtractTextPlugin('reset.css');
+
 const DIST = `${__dirname}/build/app`;
 module.exports = {
   entry: './src/app/index.tsx',
@@ -34,8 +37,16 @@ module.exports = {
       { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
 
       {
+        test: /reset.scss$/,
+        use: ResetCSSExtract.extract({
+          fallback: 'style-loader',
+          use: 'css-loader!sass-loader'
+        })
+      },
+      {
         test: /\.(css|sass|scss)$/,
-        use: ExtractTextPlugin.extract({
+        exclude: [/reset\.scss/],
+        use: BaseCSSExtract.extract({
           fallback: 'style-loader',
           use: 'css-loader!sass-loader'
         })
@@ -58,7 +69,8 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin("[name].css"),
+    ResetCSSExtract,
+    BaseCSSExtract,
     new webpack.ProvidePlugin({
       "React": "react",
     }),
