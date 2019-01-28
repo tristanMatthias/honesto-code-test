@@ -18,6 +18,7 @@
     "admin": true,
 
     "plugins": {
+        "favicon": "./favicon/favicon.png",
         "spa": {
             "fallback": "./build/app/index.html"
         },
