@@ -104,7 +104,7 @@ export const MyFeedback = connect(
               </ul>
             </div>
 
-            {(selected && feedback.length)
+            {(selected && feedback && feedback.length)
               ? <div className='feedback'>
                 <h2>Feedback from <User userID={selected.from} /></h2>
 
