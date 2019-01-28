@@ -5,6 +5,7 @@ import {Origami} from '@origami/origami';
 import { Feedback } from './resources/Feedback';
 import {Question} from './resources/Question';
 import {QuestionOption} from './resources/QuestionOption';
+import { feedbackGet, feedbackList } from './routes/feedback';
 import { questionOptions } from './routes/questionOptions';
 
 // @ts-ignore
@@ -18,7 +19,11 @@ app.ready(async () => {
     model: QuestionOption
   });
   await app.server.resource('feedback', {
-    model: Feedback
+    model: Feedback,
+    controllers: {
+      list: feedbackList,
+      get: feedbackGet
+    }
   });
 
   app.server.useRouter(questionOptions);
