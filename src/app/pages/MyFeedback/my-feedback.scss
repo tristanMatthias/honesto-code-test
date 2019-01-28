@@ -20,6 +20,10 @@ main.my-feedback {
     li.active {
       background-color: $color-grey-200;
     }
+
+    .user {
+      font-family: $font-family-regular;
+    }
   }
 
   .feedback {

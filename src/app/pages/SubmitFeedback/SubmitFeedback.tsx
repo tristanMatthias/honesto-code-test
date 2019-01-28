@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { usersGet } from '../../actions/Users';
-import { State, User } from '../../store/state';
+import { State, User as StateUser } from '../../store/state';
 import { Box } from '../../ui/Box/Box';
 import { Button } from '../../ui/Button/Button';
 import { Page } from '../../ui/Page/Page';
 import { Question } from '../../ui/Question/Question';
+import { User } from '../../ui/User/User';
 // tslint:disable-next-line:no-import-side-effect
 import './submit-feedback.scss';
 
@@ -76,9 +77,9 @@ export interface SubmitFeedbackState {
 
 
 export interface SubmitFeedbackProps extends RouteComponentProps<{id: string}> {
-  me: User;
+  me: StateUser;
   questions: QuestionData[];
-  users: User[];
+  users: StateUser[];
   actions: {
     getUsers(): void;
   };
@@ -115,22 +116,27 @@ const SubmitFeedbackConnect = connect(
       this.props.actions.getUsers();
     }
 
+    get userID() {
+      return this.props.match.params.id;
+    }
+
     get user() {
-      return this.props.users.find((u) => u.id === this.props.match.params.id);
+      return this.props.users.find((u) => u.id === this.userID);
     }
 
     public render() {
       const current = this.props.questions[this.state.page];
       return <Page page='submit-feedback'>
         <h1>{current.title}</h1>
+        <strong>share your feedback for <User userID={this.userID}/></strong>
 
 
         <Box>
-        <Question
-          description={current.description}
-          type={current.type}
-          onChange={(v) => this.change(v, current)}
-        />
+          <Question
+            description={current.description}
+            type={current.type}
+            onChange={(v) => this.change(v, current)}
+          />
 
           <div className='buttons'>
             <Button

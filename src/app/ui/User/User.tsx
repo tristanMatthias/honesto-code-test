@@ -26,9 +26,9 @@ export const User = connect(
 
       if (!user) return null;
 
-      return <div className='user'>
+      return <span className='user'>
         <span>{user.fname} {user.lname}</span>
-      </div>;
+      </span>;
     }
   }
 );
