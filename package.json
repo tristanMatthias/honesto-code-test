@@ -14,7 +14,7 @@
     "build": "yarn clean; yarn build:app; yarn build:server",
     "build:app": "webpack --mode=production",
     "build:server": "tsc -p tsconfig.server.json",
-    "postinstall": "yarn build"
+    "heroku-postbuild": "yarn build"
   },
   "devDependencies": {
     "@origami/tslint-config": "^0.0.3-alpha.3",
