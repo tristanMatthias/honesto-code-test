@@ -14,7 +14,7 @@
     "dev:app": "webpack --mode=development -w",
     "build": "yarn clean; yarn build:app; yarn build:server",
     "build:app": "webpack --mode=production",
-    "build:server": "tsc -p tsconfig.server.json",
+    "build:server": "echo 'TODO'",
     "postinstall": "yarn build"
   },
   "devDependencies": {
