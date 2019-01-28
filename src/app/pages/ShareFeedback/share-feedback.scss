@@ -3,11 +3,19 @@
 main.share-feedback {
   li {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
+
+    .profile {
+      margin-right: $size-small;
+    }
 
     .user {
       font-family: $font-family-regular;
+    }
+
+    .button {
+      margin-left: auto;
     }
   }
 }

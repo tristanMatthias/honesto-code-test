@@ -7,6 +7,7 @@ import { FeedbackItem, Question, State, User as StateUser } from '../../store/st
 import { Box } from '../../ui/Box/Box';
 import { Page } from '../../ui/Page/Page';
 import { User } from '../../ui/User/User';
+import { UserProfile } from '../../ui/UserProfile/UserProfile';
 import { FeedbackQuestion } from './FeedbackQuestion/FeedbackQuestion';
 // tslint:disable-next-line:no-import-side-effect
 import './my-feedback.scss';
@@ -98,6 +99,7 @@ export const MyFeedback = connect(
                     onClick={() => this.setState({ selected: f.id })}
                     role='menuitem'
                   >
+                    <UserProfile userID={f.from} />
                     <User userID={f.from} />
                   </li>
                 )}
@@ -109,9 +111,10 @@ export const MyFeedback = connect(
                 <h2>Feedback from <User userID={selected.from} /></h2>
 
                 <ul className='list'>
-                  {feedback.map((fb, i) =>
-                    <FeedbackQuestion {...fb} key={`${selected.id}${fb.question.id}`} />
-                  )}
+                  {feedback.map((fb, i) => {
+                    if (!fb.question) return null;
+                    return <FeedbackQuestion {...fb} key={`${selected.id}${fb.question.id}`} />;
+                  })}
                 </ul>
               </div>
               : null

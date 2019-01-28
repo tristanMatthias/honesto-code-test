@@ -1,0 +1,8 @@
+@import '../../sass/variables';
+
+img.profile {
+  display: inline-block;
+  border-radius: 50%;
+  width: $size-large;
+  height: $size-large;
+}

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 // @ts-ignore
 import logo from '../../images/logo.svg';
 import { State, User } from '../../store/state';
+import { UserProfile } from '../UserProfile/UserProfile';
 // tslint:disable-next-line:no-import-side-effect
 import './header.scss';
 
@@ -45,8 +46,11 @@ const HeaderConnect = connect((state: State) => ({
             )}
           </ul>
           <div className='user'>
-            <span>{this.props.me.fname} {this.props.me.lname}</span>
-            <Link to='/logout'>Logout</Link>
+            <UserProfile userID={this.props.me.id} />
+            <div className='text'>
+              <span>{this.props.me.fname} {this.props.me.lname}</span>
+              <Link to='/logout'>Logout</Link>
+            </div>
           </div>
         </div>
       </header>;

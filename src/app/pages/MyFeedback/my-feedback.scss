@@ -17,6 +17,14 @@ main.my-feedback {
       border-bottom: 1px solid $color-grey-300;
     }
 
+    li {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: $size-small;
+      }
+    }
+
     li.active {
       background-color: $color-grey-200;
     }

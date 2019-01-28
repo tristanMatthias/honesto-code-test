@@ -13,6 +13,7 @@ import { Loading } from '../../ui/Loading/Loading';
 import { Page } from '../../ui/Page/Page';
 import { Question } from '../../ui/Question/Question';
 import { User } from '../../ui/User/User';
+import { UserProfile } from '../../ui/UserProfile/UserProfile';
 // tslint:disable-next-line:no-import-side-effect
 import './submit-feedback.scss';
 
@@ -86,8 +87,13 @@ const SubmitFeedbackConnect = connect(
       if (!current) return <Loading />;
 
       return <Page page='submit-feedback'>
-        <h1>{current.title}</h1>
-        <strong>share your feedback for <User userID={this.userID}/></strong>
+        <div class='title'>
+          <div className='text'>
+            <h1>{current.title}</h1>
+            <strong>share your feedback for <User userID={this.userID}/></strong>
+          </div>
+          <UserProfile userID={this.userID} />
+        </div>
 
 
         <Box>

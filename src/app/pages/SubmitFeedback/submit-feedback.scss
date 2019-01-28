@@ -10,6 +10,14 @@ main.submit-feedback {
     margin-top: 1.2rem;
     color: $color-grey-500;
   }
+
+  .title {
+    display: flex;
+    align-items: center;
+    img {
+      margin-left: auto;
+    }
+  }
   .box {
     padding: $size-medium $size-small;
 

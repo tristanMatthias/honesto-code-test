@@ -35,7 +35,15 @@ header {
   }
 
   .user {
+    height: 100%;
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid $color-grey-300;
+
+    img {
+      margin: 0 $size-small;
+    }
 
     a {
       display: block;

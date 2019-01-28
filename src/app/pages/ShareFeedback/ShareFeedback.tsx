@@ -7,6 +7,7 @@ import { Box } from '../../ui/Box/Box';
 import { Header } from '../../ui/Header/Header';
 import { Page } from '../../ui/Page/Page';
 import { User } from '../../ui/User/User';
+import { UserProfile } from '../../ui/UserProfile/UserProfile';
 // tslint:disable-next-line:no-import-side-effect
 import './share-feedback.scss';
 
@@ -39,6 +40,7 @@ class ShareFeedbackBase extends Component<ShareFeedbackProps> {
         <ul className='list'>
           {this.props.users.map((u) =>
             <li key={u.id}>
+              <UserProfile userID={u.id} />
               <User userID={u.id} />
               <Link to={`/give-feedback/${u.id}`} className='button'>Fill out</Link>
             </li>
