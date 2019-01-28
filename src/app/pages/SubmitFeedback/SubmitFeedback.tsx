@@ -87,7 +87,7 @@ const SubmitFeedbackConnect = connect(
       if (!current) return <Loading />;
 
       return <Page page='submit-feedback'>
-        <div class='title'>
+        <div className='title'>
           <div className='text'>
             <h1>{current.title}</h1>
             <strong>share your feedback for <User userID={this.userID}/></strong>
