@@ -8,7 +8,8 @@
     cursor: pointer;
 
     &.active {
-      background: $color-grey-300;
+      background: $color-grey-700;
+      color: $color-white;
     }
 
     p {
