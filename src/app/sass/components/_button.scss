@@ -10,6 +10,7 @@ button, *.button {
   border-radius: $border-radius;
   padding: 0 $size-main;
   cursor: pointer;
+  white-space: nowrap;
 
   &.outline {
     border: 1px solid $color-grey-300;
