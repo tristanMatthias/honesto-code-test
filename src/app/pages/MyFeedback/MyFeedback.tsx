@@ -110,7 +110,7 @@ export const MyFeedback = connect(
 
                 <ul className='list'>
                   {feedback.map((fb, i) =>
-                    <FeedbackQuestion {...fb} key={i} />
+                    <FeedbackQuestion {...fb} key={`${selected.id}${fb.question.id}`} />
                   )}
                 </ul>
               </div>
