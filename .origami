@@ -1,0 +1,31 @@
+{
+    "app": {
+        "name": "citrus-byte-code-test"
+    },
+    "store": {
+        "type": "mongodb",
+        "host": "localhost",
+        "port": 27017,
+        "database": "origami-citrus-byte-code-test",
+        "username": "origami",
+        "password": "origami"
+    },
+    "server": {
+        "port": 9999,
+        "secret": "43ca23f6927c1bb8d75a7d831cb99c39",
+        "static": "./build/app/"
+    },
+    "admin": true,
+
+    "plugins": {
+        "spa": {
+            "fallback": "./build/app/index.html"
+        },
+        "social-login": {
+            "host": "http://localhost:9999",
+            "google": {
+                "clientID": "1064680088259-he64mp57lrvf52viukhdhtbqupae64v9.apps.googleusercontent.com"
+            }
+        }
+    }
+}

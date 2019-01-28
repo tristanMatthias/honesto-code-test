@@ -1,0 +1,17 @@
+{
+  "include": ["./src/server/**/*.tsx"],
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "outDir": "./build/server",
+    "preserveConstEnums": true,
+    "target": "esnext",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "rootDir": "./src/server",
+  }
+}

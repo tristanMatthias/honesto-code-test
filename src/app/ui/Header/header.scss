@@ -1,0 +1,49 @@
+@import '../../sass/variables';
+
+$header-height: 7.5rem;
+
+header {
+  background: $color-grey-200;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: $size-large;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    height: $header-height;
+  }
+
+  img.logo {
+    // transform: translateY(-20%);
+    margin-right: $size-main;
+  }
+
+  ul {
+    height: $header-height;
+    line-height: $header-height;
+    display: inline-flex;
+
+    li {
+      margin: 0 $size-main;
+      font-family: $font-family-regular;
+
+      &.active {
+        border-bottom: 3px solid $color-purple;
+      }
+    }
+
+  }
+
+  .user {
+    margin-left: auto;
+
+    a {
+      display: block;
+      margin-top: $size-tiny;
+      text-transform: uppercase;
+      font-family: $font-family-bold;
+      color: $color-grey-700;
+      font-size: 1.2rem;
+    }
+  }
+}

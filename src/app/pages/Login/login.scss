@@ -1,0 +1,40 @@
+@import '../../sass/variables';
+
+main.login {
+  background-image: url('../../images/login/login.svg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    margin: 0;
+    max-width: 38rem;
+  }
+
+  .card {
+    padding: $size-huge 0;
+    background: white;
+    text-align: center;
+
+    .logo {
+      height: 7rem;
+      display: block;
+      margin: auto;
+      margin-bottom: $size-main;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-family: $font-family-bold;
+    }
+
+    hr {
+      margin: $size-main auto;
+    }
+
+    hr, button {
+      width: 19.2rem;
+    }
+  }
+}

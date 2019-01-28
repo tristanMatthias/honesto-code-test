@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1440 880" style="enable-background:new 0 0 1440 880;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#XMLID_3_);}
+	.st1{fill:url(#SVGID_1_);}
+	.st2{fill:url(#SVGID_2_);}
+	.st3{fill:url(#SVGID_3_);}
+	.st4{fill:url(#SVGID_4_);}
+  g.multiply {
+    mix-blend-mode: multiply;
+  }
+</style>
+<g>
+	<defs>
+		<rect id="XMLID_1_" width="1440" height="880"/>
+	</defs>
+	<clipPath id="XMLID_3_">
+		<use xlink:href="#XMLID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		<g class="multiply">
+
+				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="700.2209" y1="1442.999" x2="700.2209" y2="-1135.6609" gradientTransform="matrix(1 0 0 -1 14 756)">
+				<stop  offset="0" style="stop-color:#D5B0F2"/>
+				<stop  offset="1" style="stop-color:#D5B0F2;stop-opacity:0"/>
+			</linearGradient>
+			<ellipse class="st1" cx="714.2" cy="602.3" rx="1289.3" ry="1289.3"/>
+		</g>
+		<g class="multiply">
+
+				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-684.738" y1="1508.8401" x2="-684.738" y2="-2300" gradientTransform="matrix(1 0 0 -1 14 756)">
+				<stop  offset="0" style="stop-color:#D5B0F2"/>
+				<stop  offset="1" style="stop-color:#D5B0F2;stop-opacity:0"/>
+			</linearGradient>
+			<ellipse class="st2" cx="-670.7" cy="1151.6" rx="1904.3" ry="1904.3"/>
+		</g>
+		<g class="multiply">
+
+				<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="149.116" y1="2189.002" x2="149.116" y2="-898.298" gradientTransform="matrix(1 0 0 -1 14 756)">
+				<stop  offset="0" style="stop-color:#1DDEBB"/>
+				<stop  offset="1" style="stop-color:#1DDEBB;stop-opacity:0"/>
+			</linearGradient>
+			<ellipse class="st3" cx="163.1" cy="110.6" rx="1543.6" ry="1543.6"/>
+		</g>
+		<g class="multiply">
+
+				<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="941.573" y1="645.3601" x2="941.573" y2="-1436.5" gradientTransform="matrix(1 0 0 -1 14 756)">
+				<stop  offset="0" style="stop-color:#D5B0F2"/>
+				<stop  offset="1" style="stop-color:#D5B0F2;stop-opacity:0"/>
+			</linearGradient>
+			<ellipse class="st4" cx="955.6" cy="1151.6" rx="1040.9" ry="1040.9"/>
+		</g>
+	</g>
+</g>
+</svg>

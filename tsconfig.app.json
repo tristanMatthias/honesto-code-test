@@ -1,0 +1,22 @@
+{
+  "include": ["./src/app/**/*.tsx"],
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2015", "dom"],
+    "jsx": "react",
+    "module": "es6",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "outDir": "./build/server",
+    "preserveConstEnums": true,
+    "target": "es5",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "rootDir": "./src/app",
+    "typeRoots": [
+      "./src/app/typings/"
+    ]
+  }
+}

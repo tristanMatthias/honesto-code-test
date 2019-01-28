@@ -1,0 +1,40 @@
+// ----------------------------------------------------------------------- Sizes
+$size-tiny: 1rem;
+$size-small: 2rem;
+$size-medium: 3rem;
+$size-main: 4rem;
+$size-large: 6rem;
+$size-huge: 8rem;
+$size-super: 12rem;
+
+// ---------------------------------------------------------------------- Colors
+$color-black: #000;
+$color-grey-900: #031323;
+$color-grey-700: #59636E;
+$color-grey-500: #ACB1B6;
+$color-grey-300: #D9DCDE;;
+$color-grey-200: #F2F3F4;
+$color-white: #ffffff;
+
+$color-purple: #AB61E5;
+$color-orange-dark: #DE521D;
+$color-orange-light: #FF8C21;
+$color-yellow: #F5DD07;
+$color-green-light: #91D958;
+$color-green-dark: #2BBF6A;
+$color-teal: #58bba1;
+
+$color-text: $color-grey-900;
+$color-hover: rgba(213, 176, 242, 0.1);
+
+// ----------------------------------------------------------------------- Fonts
+$font-size: 1.6rem;
+$font-family-medium: 'Untitled Sans Medium', sans-serif;
+$font-family-regular: 'Untitled Sans Regular', sans-serif;
+$font-family-bold: 'Untitled Sans Bold', sans-serif;
+$font-family: $font-family-medium;
+
+
+
+$shadow-25: 0px 0px 4px rgba($color-black, 0.25);
+$border-radius: 0.4rem;
