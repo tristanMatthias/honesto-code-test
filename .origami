@@ -22,7 +22,7 @@
             "fallback": "./build/app/index.html"
         },
         "social-login": {
-            "host": "http://localhost:9999",
+            "host": "http://honesto-test.herokuapp.com",
             "google": {
                 "clientID": "1064680088259-he64mp57lrvf52viukhdhtbqupae64v9.apps.googleusercontent.com"
             }
