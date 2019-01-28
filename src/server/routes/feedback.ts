@@ -6,7 +6,7 @@ export const feedbackList: Origami.Server.RequestHandler = async(req, res, next)
 
   res.locals.content.set(
     await m.find({
-      from: req.jwt.data.userId
+      to: req.jwt.data.userId
     })
   );
 
@@ -20,7 +20,7 @@ export const feedbackGet: Origami.Server.RequestHandler = async(req, res, next) 
     // @ts-ignore
     await m.findOne({
       id: req.params.feedbackId,
-      from: req.jwt.data.userId
+      to: req.jwt.data.userId
     })
   );
 
