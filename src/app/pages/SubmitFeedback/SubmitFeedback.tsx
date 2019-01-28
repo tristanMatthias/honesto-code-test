@@ -140,9 +140,14 @@ const SubmitFeedbackConnect = connect(
             <Button outline={true} onClick={this.next.bind(this)}>Skip</Button>
             <Button onClick={this.next.bind(this)}>Next</Button>
           </div>
+          <div className='progress'>
+            <span style={{
+              width: `${(this.state.page / (this.props.questions.length - 1)) * 100}%`
+            }}></span>
+          </div>
           <div className='progress-text'>
             <strong>Questions completed</strong>
-            <span>{this.state.page + 1} / {this.props.questions.length}</span>
+            <span>{this.state.page + 1} / {this.props.questions.length}</span>`
           </div>
         </Box>
       </Page>;
@@ -175,3 +180,4 @@ const SubmitFeedbackConnect = connect(
 
 // tslint:disable-next-line:variable-name
 export const SubmitFeedback = withRouter((props) => <SubmitFeedbackConnect {...props} />);
+

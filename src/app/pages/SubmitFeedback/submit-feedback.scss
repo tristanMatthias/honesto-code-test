@@ -14,9 +14,27 @@ main.submit-feedback {
        margin-bottom: $size-main;
     }
 
+    .progress {
+      width: 100%;
+      position: relative;
+      height: 0.5rem;
+      border-radius: $border-radius;
+      background: $color-grey-200;
+
+      span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        border-radius: $border-radius;
+        background: linear-gradient(to right, $color-teal, rgb(176, 252, 250));
+      }
+    }
+
     .buttons {
       display: flex;
       justify-content: space-between;
+      margin-bottom: $size-small;
 
       button {
         width: 15rem;
@@ -24,7 +42,7 @@ main.submit-feedback {
     }
 
     .progress-text {
-      margin-top: $size-main;
+      margin-top: $size-small;
       font-family: $font-family-regular;
 
       strong {
