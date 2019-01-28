@@ -1,2 +1,38 @@
+@import '../../sass/variables';
+
 main.my-feedback {
+  .box {
+    display: grid;
+    grid-template-columns: 38rem 1fr;
+  }
+  .my-feedback {
+    width: 38rem;
+    border-right: 1px solid $color-grey-300;
+
+    strong {
+      display: block;
+      height: $size-main;
+      line-height: $size-main;
+      padding-left: $size-tiny;
+      border-bottom: 1px solid $color-grey-300;
+    }
+
+    li.active {
+      background-color: $color-grey-200;
+    }
+  }
+
+  .feedback {
+    h2 {
+      border-bottom: 1px solid $color-grey-300;
+      padding: 0 $size-small;
+
+      .user {
+        display: inline-block;
+        font-family: $font-family-regular;
+        height: $size-large;
+        line-height: $size-large;
+      }
+    }
+  }
 }

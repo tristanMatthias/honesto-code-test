@@ -6,9 +6,7 @@ export interface State {
   Me: User;
   Auth: Auth;
   Users: Users;
-  // resources: {
-  //   [name: string]: any;
-  // };
+  Feedback: Feedback;
 }
 
 export interface Loader {
@@ -46,4 +44,15 @@ export interface User {
   fname: null | string;
   lname: null | string;
   email: null | string;
+}
+
+export interface Feedback extends ResourceState {
+  feedbacks: FeedbackItem[];
+}
+
+export interface FeedbackItem {
+  id: null | string;
+  from: string;
+  to: string;
+  values: string;
 }

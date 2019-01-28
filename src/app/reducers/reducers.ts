@@ -5,5 +5,6 @@ import {Me} from './Me';
 export const reducers = {
   Auth,
   Me,
-  Users: APIReducer('users')
+  Users: APIReducer('users'),
+  Feedback: APIReducer('feedbacks')
 };
