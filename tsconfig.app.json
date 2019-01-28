@@ -4,7 +4,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["es2015", "dom"],
+    "lib": ["es2015", "dom", "es2017.object"],
     "jsx": "react",
     "module": "es6",
     "moduleResolution": "node",

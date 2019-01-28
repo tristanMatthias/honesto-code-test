@@ -38,5 +38,23 @@ main.my-feedback {
         line-height: $size-large;
       }
     }
+
+    li {
+      padding: $size-small;
+      height: auto;
+      line-height: 1.5;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      p + p {
+        grid-column: span 2;
+        margin-top: $size-small;
+        color: $color-grey-500;
+      }
+
+      .range {
+        grid-template-columns: repeat(10, 1fr);
+      }
+    }
   }
 }

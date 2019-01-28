@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
+import { QuestionRadioOption } from '../../store/state';
+import { RadioQuestion } from '../RadioQuestion/RadioQuestion';
 import { Range } from '../Range/Range';
 
 export type QuestionType = 'radio' | 'range' | 'text';
 
 export interface QuestionProps {
+  questionID: string;
   type: QuestionType;
   description?: string;
+  options?: QuestionRadioOption[];
   onChange(value: number | string): void;
 }
 
 export class Question extends Component<QuestionProps> {
+  get options() {
+    return this.props.options.filter((o) => o.question === this.props.questionID);
+  }
   public render() {
     let content;
 
     switch (this.props.type) {
       case 'radio':
+        content = <RadioQuestion options={this.options} onChange={this.props.onChange} />;
         break;
+
       case 'text':
         content = <textarea
           placeholder='Say Something'

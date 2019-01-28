@@ -1,0 +1,18 @@
+@import '../../sass/variables';
+.radio-question {
+  li {
+    padding: $size-small $size-medium;
+    background: $color-grey-200;
+    border-radius: $border-radius;
+    margin-bottom: $size-tiny;
+    cursor: pointer;
+
+    &.active {
+      background: $color-grey-300;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

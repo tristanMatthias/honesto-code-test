@@ -16,4 +16,8 @@ button, *.button {
     color: $color-text;
     background: none;
   }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }

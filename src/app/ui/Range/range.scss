@@ -5,19 +5,53 @@
   width: 100%;
   grid-auto-flow: column;
   grid-gap: $size-tiny;
+  min-height: $size-main;
+  align-items: flex-start;
 
   span {
     background-color: $color-grey-200;
     cursor: pointer;
+    transition: all 0.35s ease-out;
 
     &:before {
       display: block;
       content: '';
-      padding-bottom: 100%;
     }
 
     &.selected {
       background-color: $color-purple;
+    }
+  }
+
+  &.square {
+    span:before {
+      padding-bottom: 100%;
+    }
+  }
+
+  &.value-1, &.value-2 {
+    span.selected {
+      background-color: $color-orange-dark;
+    }
+  }
+  &.value-3, &.value-4 {
+    span.selected {
+      background-color: $color-orange-light;
+    }
+  }
+  &.value-5, &.value-6 {
+    span.selected {
+      background-color: $color-yellow;
+    }
+  }
+  &.value-7, &.value-8 {
+    span.selected {
+      background-color: $color-green-light;
+    }
+  }
+  &.value-9, &.value-10 {
+    span.selected {
+      background-color: $color-green-dark;
     }
   }
 }

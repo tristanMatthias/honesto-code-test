@@ -7,6 +7,8 @@ export interface State {
   Auth: Auth;
   Users: Users;
   Feedback: Feedback;
+  Questions: Questions;
+  QuestionOptions: QuestionOptions;
 }
 
 export interface Loader {
@@ -55,4 +57,40 @@ export interface FeedbackItem {
   from: string;
   to: string;
   values: string;
+}
+
+export interface Questions extends ResourceState {
+  questions: Question[];
+}
+
+export type Question = QuestionText | QuestionRadio | QuestionRange;
+
+export interface QuestionBase {
+  id: string;
+  title: string;
+  description?: string;
+}
+
+export interface QuestionText extends QuestionBase {
+  type: 'text';
+}
+export interface QuestionRange extends QuestionBase {
+  type: 'range';
+}
+
+export interface QuestionRadio extends QuestionBase {
+  type: 'radio';
+}
+
+
+export interface QuestionOptions extends ResourceState {
+  questionoptions: QuestionRadioOption[];
+}
+
+export interface QuestionRadioOption {
+  id: string;
+  question: string;
+  value: number;
+  label: string;
+  description: string;
 }

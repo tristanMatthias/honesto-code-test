@@ -13,7 +13,7 @@ main.submit-feedback {
   .box {
     padding: $size-medium $size-small;
 
-    p {
+    & > p {
       margin-bottom: $size-small;
     }
     .question {
@@ -34,6 +34,7 @@ main.submit-feedback {
         height: 100%;
         border-radius: $border-radius;
         background: linear-gradient(to right, $color-teal, rgb(176, 252, 250));
+        transition: all 0.35s ease-out;
       }
     }
 

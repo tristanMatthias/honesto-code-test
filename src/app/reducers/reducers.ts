@@ -6,5 +6,7 @@ export const reducers = {
   Auth,
   Me,
   Users: APIReducer('users'),
-  Feedback: APIReducer('feedbacks')
+  Feedback: APIReducer('feedbacks'),
+  Questions: APIReducer('questions'),
+  QuestionOptions: APIReducer('questionoptions')
 };

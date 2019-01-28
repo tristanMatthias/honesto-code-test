@@ -18,7 +18,7 @@ export const Button: React.SFC<ButtonProps> = ({
   onClick
 }) => {
   return <button
-    disabled={loading}
+    disabled={loading || disabled}
     className={`${className || ''} ${outline ? 'outline' : ''}`}
     onClick={disabled ? null : onClick}
   >{children}</button>;
