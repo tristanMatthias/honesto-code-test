@@ -11,7 +11,7 @@ import { Question } from '../../ui/Question/Question';
 // tslint:disable-next-line:no-import-side-effect
 import './submit-feedback.scss';
 
-const questions = [
+const questions: QuestionData[] = [
   {
     id: '123',
     title: 'How well did I display courage?',
@@ -43,6 +43,31 @@ const questions = [
   }
 ];
 
+export type QuestionData = QuestionText | QuestionRadio | QuestionRange;
+
+export interface QuestionBase {
+  id: string;
+  title: string;
+  description?: string;
+}
+
+export interface QuestionText extends QuestionBase {
+  type: 'text';
+}
+export interface QuestionRange extends QuestionBase {
+  type: 'range';
+}
+
+export interface QuestionRadio extends QuestionBase {
+  type: 'radio';
+  options: QuestionRadioOption[];
+}
+export interface QuestionRadioOption {
+  id: string;
+  value: string;
+  description: string;
+}
+
 
 export interface SubmitFeedbackState {
   page: number;
@@ -52,7 +77,7 @@ export interface SubmitFeedbackState {
 
 export interface SubmitFeedbackProps extends RouteComponentProps<{id: string}> {
   me: User;
-  questions: object[];
+  questions: QuestionData[];
   users: User[];
   actions: {
     getUsers(): void;
@@ -77,7 +102,7 @@ const SubmitFeedbackConnect = connect(
       questions
     };
 
-    constructor(props, state) {
+    constructor(props: SubmitFeedbackProps, state: SubmitFeedbackState) {
       super(props, state);
 
       this.state = {
@@ -131,7 +156,7 @@ const SubmitFeedbackConnect = connect(
       this.setState({page: this.state.page - 1});
     }
 
-    public change(value: string | number, question: object) {
+    public change(value: string | number, question: QuestionData) {
       const newValues = {
         ...this.state.values,
         [question.id]: value
