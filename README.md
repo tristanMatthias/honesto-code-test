@@ -1,8 +1,8 @@
-# Honesto - Citrus Byte Code Test
+# Honesto - Code Test completed mid 2018
 
 Repository for [http://honesto-test.herokuapp.com](http://honesto-test.herokuapp.com)
 
-This project is a code test for Citrusbyte. The app is built with Typescript, React, Webpack and Origami as an API platform.
+This project is a code test for a company I applied for mid 2018. The app is built with Typescript, React, Webpack and Origami as an API platform.
 
 ## Requirements
 - Node.js
